@@ -1,114 +1,116 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Play, Volume2 } from "lucide-react"
+import * as AspectRatio from "@radix-ui/react-aspect-ratio"
+import { Clock, Mic } from "lucide-react"
 
 export function Hero() {
+  const scrollToWaitlist = () => {
+    const element = document.getElementById('waitlist')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-neutral-50 to-white pt-20 pb-16 md:pt-32 md:pb-24">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="relative overflow-hidden bg-gradient-dark pt-32 pb-20 md:pt-40 md:pb-28">
+      {/* Subtle vignette effect */}
+      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-bg-base opacity-60" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left: Headlines & CTAs */}
           <div className="flex flex-col space-y-6">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900">
+              <h1 className="text-5xl md:text-6xl lg:text-[64px] font-bold tracking-tight leading-[1.05] text-text-high">
                 Cook without stopping.
-                <span className="block text-primary-500 mt-2">
-                  TalkNToast guides you step-by-step by voice.
+                <span className="block mt-2">
+                  TalkNToast guides you by voice.
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-neutral-600 max-w-xl">
-                Paste any recipe—YouTube, TikTok, blogs—and our Voice AI plans, times, and adapts while you cook.
+              <p className="text-lg md:text-xl text-text-med max-w-xl leading-relaxed">
+                Paste any recipe — YouTube, TikTok, or blogs — and get hands-free, step-by-step voice guidance.
               </p>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="text-base"
-                data-testid="get-early-access-hero-btn"
-              >
-                Get Early Access
-              </Button>
-              
+            {/* Text Links as CTAs */}
+            <div className="flex items-center gap-6 text-base md:text-lg">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button 
-                    variant="ghost" 
-                    size="lg" 
-                    className="text-base"
-                    data-testid="watch-demo-btn"
+                  <button 
+                    className="text-text-high hover:text-primary transition-colors underline underline-offset-4 decoration-text-low hover:decoration-primary"
+                    data-testid="hero-watch-demo"
                   >
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch 60s Demo
-                  </Button>
+                    Watch demo
+                  </button>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl" data-testid="demo-video-dialog">
+                <DialogContent className="max-w-4xl bg-bg-elev2 border-border" data-testid="hero-demo-modal">
                   <DialogHeader>
-                    <DialogTitle>TalkNToast Demo</DialogTitle>
+                    <DialogTitle className="text-text-high">See TalkNToast in action</DialogTitle>
                   </DialogHeader>
-                  <div className="aspect-video bg-neutral-900 rounded-lg flex items-center justify-center">
-                    <div className="text-center text-white space-y-4">
-                      <div className="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto">
-                        <Play className="w-10 h-10" />
-                      </div>
-                      <p className="text-lg">Demo Video Placeholder</p>
-                      <p className="text-sm text-neutral-400">Voice-guided cooking in action</p>
-                    </div>
-                  </div>
+                  <AspectRatio.Root ratio={16 / 9}>
+                    <iframe
+                      src="https://www.youtube.com/embed/YRBOi8Sd8C0?si=3w9hKpkuuqtEr3SE"
+                      title="TalkNToast Demo Video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full rounded-lg"
+                    />
+                  </AspectRatio.Root>
                 </DialogContent>
               </Dialog>
-            </div>
 
-            {/* Trust Micro */}
-            <div className="flex items-center gap-2 text-sm text-neutral-600">
-              <Volume2 className="w-4 h-4 text-primary-500" />
-              <span>Works with Alexa, Google Home & smart kitchen devices</span>
+              <span className="text-text-low">·</span>
+
+              <button 
+                onClick={scrollToWaitlist}
+                className="text-text-high hover:text-primary transition-colors underline underline-offset-4 decoration-text-low hover:decoration-primary"
+                data-testid="hero-join-waitlist"
+              >
+                Join waitlist
+              </button>
             </div>
           </div>
 
-          {/* Right: Demo Video/Mockup */}
+          {/* Right: Static UI Card Mock */}
           <div className="relative">
-            <div className="aspect-[4/5] bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl shadow-2xl overflow-hidden relative">
-              {/* Phone mockup frame */}
-              <div className="absolute inset-0 flex items-center justify-center p-8">
-                <div className="w-full max-w-sm bg-white rounded-3xl shadow-xl overflow-hidden">
-                  <div className="bg-neutral-900 p-4 text-white">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm font-medium">Step 3 of 8</span>
-                      <span className="text-xs bg-primary-500 px-2 py-1 rounded-full">5:30</span>
-                    </div>
-                    <p className="text-lg font-semibold">"Dice the onions into small pieces"</p>
-                  </div>
-                  <div className="p-6 space-y-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                          <Volume2 className="w-6 h-6 text-primary-500" />
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-sm font-medium">Voice Command</p>
-                          <p className="text-xs text-neutral-500">"What's next?"</p>
-                        </div>
-                      </div>
-                      <div className="flex gap-2">
-                        <button className="flex-1 py-3 px-4 bg-primary-50 text-primary-600 rounded-lg text-sm font-medium">
-                          Repeat
-                        </button>
-                        <button className="flex-1 py-3 px-4 bg-neutral-100 text-neutral-700 rounded-lg text-sm font-medium">
-                          Skip
-                        </button>
-                      </div>
-                    </div>
+            <div className="bg-bg-elev1 rounded-[20px] shadow-glow-lg border border-border/50 overflow-hidden max-w-md mx-auto">
+              {/* Step Card Header */}
+              <div className="bg-gradient-to-r from-primary-700 to-primary-600 p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-medium text-white/90">Step 3 of 8</span>
+                  <div className="flex items-center gap-1.5 bg-white/20 px-3 py-1 rounded-full">
+                    <Clock className="w-3.5 h-3.5 text-white" />
+                    <span className="text-sm font-semibold text-white">5:30</span>
                   </div>
                 </div>
+                <p className="text-xl font-semibold text-white leading-snug">
+                  Dice the onions into small pieces
+                </p>
               </div>
-              
-              {/* Floating elements */}
-              <div className="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-3 animate-pulse">
-                <p className="text-xs font-medium text-neutral-600">Timer: 7:00</p>
+
+              {/* Step Card Body */}
+              <div className="p-6 space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mic className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="flex-1 pt-1">
+                      <p className="text-sm font-medium text-text-high">Voice Command</p>
+                      <p className="text-sm text-text-purple mt-1">“What’s next?”</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3 pt-2">
+                    <button className="flex-1 py-3 px-4 bg-primary/10 text-primary rounded-xl text-sm font-medium hover:bg-primary/20 transition-colors">
+                      Repeat
+                    </button>
+                    <button className="flex-1 py-3 px-4 bg-bg-elev2 text-text-med rounded-xl text-sm font-medium hover:bg-bg-base transition-colors">
+                      Skip
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

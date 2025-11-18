@@ -4,11 +4,11 @@
 
 @layer base {
   * {
-    @apply border-neutral-200;
+    @apply border-border;
   }
   
   body {
-    @apply bg-white text-neutral-900;
+    @apply bg-bg-base text-text-high font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -47,4 +47,9 @@
 
 .animate-accordion-up {
   animation: accordion-up 0.2s ease-out;
+}
+
+/* Smooth scrolling with offset for sticky nav */
+html {
+  scroll-padding-top: 80px;
 }

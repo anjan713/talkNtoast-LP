@@ -1,75 +1,62 @@
-import { Link2, MessageCircle, CheckCircle } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
+"use client"
+
+import { Link2, Sparkles, Mic } from "lucide-react"
 
 export function HowItWorks() {
   const steps = [
     {
       icon: Link2,
-      title: "Drop a link or paste text",
-      description: "YouTube, TikTok, Instagram, or any recipe blog. Just paste and we'll do the rest.",
-      badges: ["YouTube", "TikTok", "Instagram", "Blogs"],
+      title: "Paste a recipe link",
+      description: "YouTube, TikTok, or blogs",
     },
     {
-      icon: MessageCircle,
-      title: "Talk to cook",
-      description: '"What\'s next?", "Set a 7-minute timer," "Do I dice or slice?" — just ask naturally.',
-      badges: ["Hands-free", "Voice Commands"],
+      icon: Sparkles,
+      title: "AI turns it into steps",
+      description: "Clear, structured",
     },
     {
-      icon: CheckCircle,
-      title: "Finish smarter",
-      description: "Auto-timers, substitutions, portioning, and grocery lists—all managed for you.",
-      badges: ["Smart Timers", "Substitutions", "Lists"],
+      icon: Mic,
+      title: "Voice guides you",
+      description: "Say “What’s next?” hands-free",
     },
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-50">
+    <section className="py-20 md:py-28 bg-bg-base" id="how-it-works">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            How it works
-          </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Three simple steps from recipe link to finished dish
-          </p>
-        </div>
+        <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-high mb-3">
+              How It Works
+            </h2>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {steps.map((step, index) => (
-            <div key={index} className="relative" data-testid={`how-it-works-step-${index + 1}`}>
-              {/* Step number */}
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10">
-                {index + 1}
-              </div>
-              
-              <div className="bg-white rounded-xl p-8 shadow-sm border border-neutral-200 h-full">
-                <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
-                  <step.icon className="w-8 h-8 text-primary-500" />
+          {/* Steps Grid */}
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {steps.map((step, index) => {
+              const Icon = step.icon
+              return (
+                <div 
+                  key={index} 
+                  className="flex flex-col items-center text-center space-y-4"
+                  data-testid={`how-it-works-step-${index}`}
+                >
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-primary to-primary-deep flex items-center justify-center shadow-glow">
+                    <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl md:text-2xl font-semibold text-text-high">
+                      {step.title}
+                    </h3>
+                    <p className="text-base text-text-med max-w-[28ch]">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-neutral-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-neutral-600 mb-4">
-                  {step.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {step.badges.map((badge, badgeIndex) => (
-                    <Badge key={badgeIndex} variant="secondary">
-                      {badge}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-primary-200" />
-              )}
-            </div>
-          ))}
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

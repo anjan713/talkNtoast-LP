@@ -36,7 +36,7 @@ export function Footer() {
               Contact
             </a>
             <a 
-              href="https://www.youtube.com/watch?v=YRBOi8Sd8C0"
+              href="https://youtu.be/HFbdLGTi0r4"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-low hover:text-text-med transition-colors"

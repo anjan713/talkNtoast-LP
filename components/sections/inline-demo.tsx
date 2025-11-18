@@ -18,9 +18,10 @@ export function InlineDemo() {
           <div className="relative rounded-[20px] overflow-hidden shadow-glow border border-border/50">
             <AspectRatio.Root ratio={16 / 9}>
               <iframe
-                src="https://www.youtube.com/embed/YRBOi8Sd8C0?si=3w9hKpkuuqtEr3SE"
+                src="https://www.youtube.com/embed/HFbdLGTi0r4?si=sKdn0aHjxrfbKdhB"
                 title="TalkNToast Demo - 60 second overview"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 className="w-full h-full"
                 data-testid="inline-demo-video"

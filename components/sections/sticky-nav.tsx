@@ -62,9 +62,10 @@ export function StickyNav() {
                 </DialogHeader>
                 <AspectRatio.Root ratio={16 / 9}>
                   <iframe
-                    src="https://www.youtube.com/embed/YRBOi8Sd8C0?si=3w9hKpkuuqtEr3SE"
+                    src="https://www.youtube.com/embed/HFbdLGTi0r4?si=sKdn0aHjxrfbKdhB"
                     title="TalkNToast Demo Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                     className="w-full h-full rounded-lg"
                   />

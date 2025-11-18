@@ -2,6 +2,7 @@ import { StickyNav } from "@/components/sections/sticky-nav"
 import { Hero } from "@/components/sections/hero"
 import { InlineDemo } from "@/components/sections/inline-demo"
 import { ProblemSolution } from "@/components/sections/problem-solution"
+import { WhyPeopleWantThis } from "@/components/sections/why-people-want-this"
 import { HowItWorks } from "@/components/sections/how-it-works"
 import { Features } from "@/components/sections/features"
 import { Waitlist } from "@/components/sections/waitlist"
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <InlineDemo />
         <ProblemSolution />
+        <WhyPeopleWantThis />
         <HowItWorks />
         <Features />
         <Waitlist />

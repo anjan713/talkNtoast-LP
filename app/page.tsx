@@ -24,6 +24,7 @@ export default function Home() {
       <CompetitiveLandscape />
       <LiveDemo />
       <VisionEcosystem />
+      <VisionRoadmap />
       <Pricing />
       <FAQ />
       <TrustPrivacy />

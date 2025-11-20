@@ -66,7 +66,7 @@ export function FAQ() {
     {
       id: "faq-creator-economy",
       emoji: "🎥",
-      question: "Creator & Recipe Economy",
+      question: "What is the Creator & Recipe Economy opportunity?",
       insights: [
         {
           text: "Cooking content is the #1 influencer category, with 51% of global users consuming recipe content on social media.",

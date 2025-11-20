@@ -32,7 +32,7 @@ export function FAQ() {
     {
       id: "faq-smart-kitchen-market",
       emoji: "🍳",
-      question: "Smart Kitchen Market",
+      question: "What is the Smart Kitchen Market opportunity?",
       insights: [
         {
           text: "The global smart kitchen market is projected to reach USD 37.2 billion by 2030 (CAGR 11.3%).",

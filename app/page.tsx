@@ -5,6 +5,7 @@ import { ProblemSolution } from "@/components/sections/problem-solution"
 import { WhyPeopleWantThis } from "@/components/sections/why-people-want-this"
 import { HowItWorks } from "@/components/sections/how-it-works"
 import { Features } from "@/components/sections/features"
+import { Vision } from "@/components/sections/vision"
 import { Waitlist } from "@/components/sections/waitlist"
 import { FAQ } from "@/components/sections/faq"
 import { Footer } from "@/components/sections/footer"
@@ -20,6 +21,7 @@ export default function Home() {
         <WhyPeopleWantThis />
         <HowItWorks />
         <Features />
+        <Vision />
         <Waitlist />
         <FAQ />
       </main>

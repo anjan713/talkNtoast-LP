@@ -1,119 +1,75 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import { Volume2, Video, Brain, Calendar, Radio, Code } from "lucide-react"
+import { Mic2, Timer, Link, Brain, Speaker } from "lucide-react"
 
 export function Features() {
-  const homeCookFeatures = [
+  const features = [
     {
-      icon: Volume2,
-      title: "Voice-first guidance",
-      description: "Step-by-step prompts, hands-free controls, and automatic timers keep you cooking without interruption.",
+      icon: Mic2,
+      title: "Ask ‘What’s next?’ anytime",
+      description: "Voice-guided prompts keep you in the flow without touching your device.",
     },
     {
-      icon: Video,
-      title: "Understands social recipes",
-      description: "Pulls structured steps from videos and links you already trust—TikTok, YouTube, Instagram, and blogs.",
+      icon: Timer,
+      title: "Smart timers that talk to you",
+      description: "Automatic timing for each step with voice notifications.",
     },
     {
-      icon: Brain,
-      title: "Learns your style",
-      description: "Adapts to your dietary needs, regional flavors, preferred cookware, and spice preferences.",
-    },
-    {
-      icon: Calendar,
-      title: "All-in-one kitchen hub",
-      description: "Recipe vault, meal planning, smart inventory tracking, and one-click grocery list export.",
-    },
-    {
-      icon: Radio,
-      title: "Smart device integration",
-      description: "Works seamlessly with Alexa, Google Home, smart ovens, scales, and IoT timers.",
-    },
-  ]
-
-  const platformFeatures = [
-    {
-      icon: Code,
-      title: "Voice AI SDK",
-      description: "Complete SDK for voice-guided cooking experiences with step extraction and orchestration.",
-    },
-    {
-      icon: Video,
-      title: "Social ingestion APIs",
-      description: "Parse and structure recipes from social media platforms with rights-respecting technology.",
+      icon: Link,
+      title: "Paste from anywhere",
+      description: "YouTube, TikTok, or blogs — works with any recipe source.",
     },
     {
       icon: Brain,
-      title: "Personalization services",
-      description: "White-label personalization engine for dietary preferences, substitutions, and user learning.",
+      title: "Adapts if you skip or repeat",
+      description: "Intelligent flow that adjusts to your cooking pace.",
     },
     {
-      icon: Radio,
-      title: "IoT integration",
-      description: "Pre-built connections to major smart kitchen device ecosystems and protocols.",
+      icon: Speaker,
+      title: "Works on smart speakers",
+      description: "Run our voice AI on Alexa, Google Home, and other smart speakers.",
     },
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-20 md:py-28 bg-bg-elev1" id="features">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            Built for real kitchens, not just recipe pages
-          </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Everything you need for a modern, hands-free cooking experience
-          </p>
+        <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-high mb-3">
+              Key Features
+            </h2>
+          </div>
+
+          {/* Features 2x2 Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon
+              return (
+                <div 
+                  key={index}
+                  className="bg-bg-base rounded-2xl p-6 md:p-8 border border-border/50 hover:border-primary/50 transition-all hover:shadow-glow"
+                  data-testid={`feature-${index}`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-lg md:text-xl font-semibold text-text-high leading-tight">
+                        {feature.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-text-med leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
-
-        <Tabs defaultValue="home-cook" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-            <TabsTrigger value="home-cook" data-testid="home-cook-tab">Home Cook</TabsTrigger>
-            <TabsTrigger value="platform" data-testid="platform-tab">For Platforms</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="home-cook" data-testid="home-cook-features">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {homeCookFeatures.map((feature, index) => (
-                <Card key={index} className="border-2 hover:border-primary-200 transition-colors">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <CardTitle className="text-lg">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-neutral-600">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="platform" data-testid="platform-features">
-            <div className="grid md:grid-cols-2 gap-6">
-              {platformFeatures.map((feature, index) => (
-                <Card key={index} className="border-2 hover:border-primary-200 transition-colors">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <CardTitle className="text-lg">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-neutral-600">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
       </div>
     </section>
   )

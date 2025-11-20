@@ -1,33 +1,33 @@
+import { StickyNav } from "@/components/sections/sticky-nav"
 import { Hero } from "@/components/sections/hero"
-import { ProblemPromise } from "@/components/sections/problem-promise"
+import { InlineDemo } from "@/components/sections/inline-demo"
+import { ProblemSolution } from "@/components/sections/problem-solution"
+import { WhyPeopleWantThis } from "@/components/sections/why-people-want-this"
 import { HowItWorks } from "@/components/sections/how-it-works"
 import { Features } from "@/components/sections/features"
-import { SocialIngestion } from "@/components/sections/social-ingestion"
-import { CompetitiveLandscape } from "@/components/sections/competitive-landscape"
-import { LiveDemo } from "@/components/sections/live-demo"
-import { VisionEcosystem } from "@/components/sections/vision-ecosystem"
-import { Pricing } from "@/components/sections/pricing"
+import { Vision } from "@/components/sections/vision"
+import { MarketSnapshot } from "@/components/sections/market-snapshot"
+import { Waitlist } from "@/components/sections/waitlist"
 import { FAQ } from "@/components/sections/faq"
-import { TrustPrivacy } from "@/components/sections/trust-privacy"
-import { FinalCTA } from "@/components/sections/final-cta"
 import { Footer } from "@/components/sections/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <ProblemPromise />
-      <HowItWorks />
-      <Features />
-      <SocialIngestion />
-      <CompetitiveLandscape />
-      <LiveDemo />
-      <VisionEcosystem />
-      <Pricing />
-      <FAQ />
-      <TrustPrivacy />
-      <FinalCTA />
+    <>
+      <StickyNav />
+      <main className="min-h-screen">
+        <Hero />
+        <InlineDemo />
+        <ProblemSolution />
+        <WhyPeopleWantThis />
+        <HowItWorks />
+        <Features />
+        <Vision />
+        <MarketSnapshot />
+        <Waitlist />
+        <FAQ />
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }

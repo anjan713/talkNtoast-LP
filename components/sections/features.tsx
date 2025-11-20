@@ -1,6 +1,6 @@
 "use client"
 
-import { Mic2, Timer, Link, Brain } from "lucide-react"
+import { Mic2, Timer, Link, Brain, Speaker } from "lucide-react"
 
 export function Features() {
   const features = [

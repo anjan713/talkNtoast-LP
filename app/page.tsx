@@ -6,6 +6,7 @@ import { WhyPeopleWantThis } from "@/components/sections/why-people-want-this"
 import { HowItWorks } from "@/components/sections/how-it-works"
 import { Features } from "@/components/sections/features"
 import { Vision } from "@/components/sections/vision"
+import { MarketSnapshot } from "@/components/sections/market-snapshot"
 import { Waitlist } from "@/components/sections/waitlist"
 import { FAQ } from "@/components/sections/faq"
 import { Footer } from "@/components/sections/footer"
@@ -22,6 +23,7 @@ export default function Home() {
         <HowItWorks />
         <Features />
         <Vision />
+        <MarketSnapshot />
         <Waitlist />
         <FAQ />
       </main>

@@ -15,7 +15,7 @@ export function FAQ() {
     {
       id: "faq-voice-assistant-market",
       emoji: "🗣️",
-      question: "Voice Assistant Market",
+      question: "What is the Voice Assistant Market opportunity?",
       insights: [
         {
           text: "The global voice assistant market was valued at USD 7.35 billion in 2024 and is expected to reach USD 33.74 billion by 2030 (CAGR 26.5%).",

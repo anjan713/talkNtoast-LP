@@ -7,14 +7,6 @@ export function Vision() {
     {
       number: 1,
       icon: Users,
-      color: "blue",
-      colorClasses: {
-        accent: "from-blue-500 to-blue-700",
-        glow: "shadow-[0_0_30px_rgba(59,130,246,0.3)]",
-        border: "border-blue-500/30",
-        iconBg: "bg-blue-500/20",
-        iconColor: "text-blue-400",
-      },
       title: "Cooking That Listens",
       description: "Launch TalkNToast as the first voice-AI recipe assistant that turns any video into a step-by-step, hands-free cooking experience.",
       tagline: "Make cooking interactive, not instructional.",
@@ -22,14 +14,6 @@ export function Vision() {
     {
       number: 2,
       icon: Sparkles,
-      color: "orange",
-      colorClasses: {
-        accent: "from-orange-500 to-orange-700",
-        glow: "shadow-[0_0_30px_rgba(249,115,22,0.3)]",
-        border: "border-orange-500/30",
-        iconBg: "bg-orange-500/20",
-        iconColor: "text-orange-400",
-      },
       title: "Empowering Food Creators",
       description: "Allow creators to upload their content, sell premium recipes, and host group or one-on-one cooking classes directly on the platform.",
       tagline: "Turn every recipe into a business.",
@@ -37,14 +21,6 @@ export function Vision() {
     {
       number: 3,
       icon: HeartPulse,
-      color: "green",
-      colorClasses: {
-        accent: "from-green-500 to-green-700",
-        glow: "shadow-[0_0_30px_rgba(34,197,94,0.3)]",
-        border: "border-green-500/30",
-        iconBg: "bg-green-500/20",
-        iconColor: "text-green-400",
-      },
       title: "Health Meets Taste",
       description: "Onboard nutritionists to craft customized diet plans, share recipes with patients, and track adherence through integrated analytics.",
       tagline: "Personalized nutrition, powered by AI.",
@@ -52,14 +28,6 @@ export function Vision() {
     {
       number: 4,
       icon: Cpu,
-      color: "teal",
-      colorClasses: {
-        accent: "from-teal-500 to-teal-700",
-        glow: "shadow-[0_0_30px_rgba(20,184,166,0.3)]",
-        border: "border-teal-500/30",
-        iconBg: "bg-teal-500/20",
-        iconColor: "text-teal-400",
-      },
       title: "The Connected Kitchen",
       description: "Integrate with IoT devices (ovens, cooktops, scales, and smart fridges) for seamless voice control and automated cooking workflows.",
       tagline: "Your kitchen, orchestrated by AI.",
@@ -67,14 +35,6 @@ export function Vision() {
     {
       number: 5,
       icon: Brain,
-      color: "purple",
-      colorClasses: {
-        accent: "from-purple-500 to-purple-700",
-        glow: "shadow-[0_0_30px_rgba(168,85,247,0.3)]",
-        border: "border-purple-500/30",
-        iconBg: "bg-purple-500/20",
-        iconColor: "text-purple-400",
-      },
       title: "Intelligence That Cooks",
       description: "Build and license TalkNToast's proprietary multimodal ML cooking model to restaurants, kitchen robots, and food-tech startups.",
       tagline: "From your kitchen to the world's.",

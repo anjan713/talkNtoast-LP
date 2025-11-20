@@ -104,8 +104,8 @@ export function FAQ() {
             </h2>
           </div>
 
-          {/* Accordion */}
-          <Accordion type="single" collapsible className="space-y-4">
+          {/* General FAQ Accordion */}
+          <Accordion type="single" collapsible className="space-y-4 mb-16">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
@@ -122,6 +122,59 @@ export function FAQ() {
               </AccordionItem>
             ))}
           </Accordion>
+
+          {/* Market Insights Section */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-text-high mb-3">
+                Market Insights & Sources
+              </h2>
+              <p className="text-base text-text-med">
+                Detailed research and statistics backing TalkNToast's market opportunity
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              {marketInsights.map((market, index) => (
+                <div
+                  key={index}
+                  id={market.id}
+                  className="bg-bg-elev1 rounded-2xl p-6 md:p-8 border border-primary/30 scroll-mt-24"
+                  data-testid={`market-insight-${index}`}
+                >
+                  {/* Title */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-3xl">{market.emoji}</span>
+                    <h3 className="text-xl md:text-2xl font-bold text-text-high">
+                      {market.title}
+                    </h3>
+                  </div>
+
+                  {/* Insights */}
+                  <div className="space-y-6">
+                    {market.insights.map((insight, idx) => (
+                      <div key={idx} className="space-y-2">
+                        <p className="text-base text-text-med leading-relaxed">
+                          {insight.text}
+                        </p>
+                        <a
+                          href={insight.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors"
+                        >
+                          <span>→ Source: {insight.source}</span>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

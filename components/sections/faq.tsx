@@ -49,7 +49,7 @@ export function FAQ() {
     {
       id: "faq-ai-kitchen-market",
       emoji: "🤖",
-      question: "AI-Enabled Kitchen Market",
+      question: "What is the AI-Enabled Kitchen Market opportunity?",
       insights: [
         {
           text: "AI-enabled kitchen appliances market: USD 11.62 billion by 2034 (CAGR 30.5%).",

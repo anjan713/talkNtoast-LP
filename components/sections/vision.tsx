@@ -90,6 +90,7 @@ export function Vision() {
 
   return (
     <section 
+      id="vision"
       className="relative py-20 md:py-28 overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #0F0C29 0%, #302B63 50%, #24243E 100%)"

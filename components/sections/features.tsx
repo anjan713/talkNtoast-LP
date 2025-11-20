@@ -24,6 +24,11 @@ export function Features() {
       title: "Adapts if you skip or repeat",
       description: "Intelligent flow that adjusts to your cooking pace.",
     },
+    {
+      icon: Speaker,
+      title: "Works on smart speakers",
+      description: "Run our voice AI on Alexa, Google Home, and other smart speakers.",
+    },
   ]
 
   return (

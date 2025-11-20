@@ -11,11 +11,11 @@ export function FAQ() {
     },
   ]
 
-  const marketInsights = [
+  const marketInsightsFAQ = [
     {
       id: "faq-voice-assistant-market",
       emoji: "🗣️",
-      title: "Voice Assistant Market",
+      question: "Voice Assistant Market",
       insights: [
         {
           text: "The global voice assistant market was valued at USD 7.35 billion in 2024 and is expected to reach USD 33.74 billion by 2030 (CAGR 26.5%).",
@@ -32,7 +32,7 @@ export function FAQ() {
     {
       id: "faq-smart-kitchen-market",
       emoji: "🍳",
-      title: "Smart Kitchen Market",
+      question: "Smart Kitchen Market",
       insights: [
         {
           text: "The global smart kitchen market is projected to reach USD 37.2 billion by 2030 (CAGR 11.3%).",
@@ -49,7 +49,7 @@ export function FAQ() {
     {
       id: "faq-ai-kitchen-market",
       emoji: "🤖",
-      title: "AI-Enabled Kitchen Market",
+      question: "AI-Enabled Kitchen Market",
       insights: [
         {
           text: "AI-enabled kitchen appliances market: USD 11.62 billion by 2034 (CAGR 30.5%).",
@@ -66,7 +66,7 @@ export function FAQ() {
     {
       id: "faq-creator-economy",
       emoji: "🎥",
-      title: "Creator & Recipe Economy",
+      question: "Creator & Recipe Economy",
       insights: [
         {
           text: "Cooking content is the #1 influencer category, with 51% of global users consuming recipe content on social media.",

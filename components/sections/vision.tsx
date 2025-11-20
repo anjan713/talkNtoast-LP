@@ -77,7 +77,7 @@ export function Vision() {
           {/* Vision Cards with Timeline */}
           <div className="relative">
             {/* Timeline connector line */}
-            <div className="absolute left-8 md:left-12 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500/20 via-purple-500/30 to-purple-500/20" 
+            <div className="absolute left-8 md:left-12 top-0 bottom-0 w-px bg-gradient-to-b from-primary/20 via-primary/30 to-primary/20" 
                  aria-hidden="true" 
             />
 
@@ -92,23 +92,23 @@ export function Vision() {
                     data-testid={`vision-phase-${phase.number}`}
                   >
                     {/* Phase number indicator */}
-                    <div className={`absolute left-0 md:left-4 top-0 w-16 h-16 rounded-full bg-gradient-to-br ${phase.colorClasses.accent} flex items-center justify-center font-bold text-2xl text-white ${phase.colorClasses.glow}`}>
+                    <div className="absolute left-0 md:left-4 top-0 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-deep flex items-center justify-center font-bold text-2xl text-white shadow-[0_0_30px_rgba(139,92,246,0.4)]">
                       {phase.number}
                     </div>
 
                     {/* Card */}
                     <div 
-                      className={`bg-black/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 border ${phase.colorClasses.border} ${phase.colorClasses.glow} hover:scale-[1.02] transition-all duration-300`}
+                      className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-primary/30 shadow-[0_0_30px_rgba(139,92,246,0.3)] hover:scale-[1.02] transition-all duration-300"
                     >
                       <div className="flex items-start gap-4 mb-4">
-                        <div className={`w-14 h-14 rounded-xl ${phase.colorClasses.iconBg} flex items-center justify-center flex-shrink-0`}>
-                          <Icon className={`w-7 h-7 ${phase.colorClasses.iconColor}`} />
+                        <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <Icon className="w-7 h-7 text-primary" />
                         </div>
                         <div className="flex-1">
                           <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                             {phase.title}
                           </h3>
-                          <p className={`text-sm font-medium ${phase.colorClasses.iconColor} uppercase tracking-wide`}>
+                          <p className="text-sm font-medium text-primary uppercase tracking-wide">
                             Phase {phase.number}
                           </p>
                         </div>
@@ -118,7 +118,7 @@ export function Vision() {
                         {phase.description}
                       </p>
 
-                      <div className={`inline-flex items-center gap-2 text-sm font-semibold ${phase.colorClasses.iconColor} bg-white/5 px-4 py-2 rounded-full border ${phase.colorClasses.border}`}>
+                      <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-white/5 px-4 py-2 rounded-full border border-primary/30">
                         <span>→</span>
                         <span>{phase.tagline}</span>
                       </div>

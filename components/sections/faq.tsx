@@ -7,18 +7,7 @@ export function FAQ() {
     {
       question: "What is TalkNToast?",
       answer: "TalkNToast is a voice-guided cooking assistant that turns any recipe from YouTube, TikTok, or blogs into hands-free, step-by-step instructions. Just paste a link and cook with voice commands.",
-    },
-    {
-      question: "When does beta open?",
-      answer: "We're currently in development and will be launching our beta program soon. Join the waitlist to be notified as soon as we open access.",
-    },
-    {
-      question: "Which devices will it support?",
-      answer: "TalkNToast will work on smartphones (iOS and Android), tablets, and through smart speakers like Amazon Alexa and Google Home. We're also exploring integrations with smart kitchen displays.",
-    },
-    {
-      question: "How do I join the waitlist?",
-      answer: "Simply enter your email in the waitlist form above. We'll send you an invitation as soon as beta spots become available. You'll be among the first to experience hands-free cooking.",
+      id: null,
     },
   ]
 

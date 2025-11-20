@@ -93,8 +93,9 @@ export function FAQ() {
             </h2>
           </div>
 
-          {/* General FAQ Accordion */}
-          <Accordion type="single" collapsible className="space-y-4 mb-16">
+          {/* FAQ Accordion - General + Market Insights */}
+          <Accordion type="single" collapsible className="space-y-4">
+            {/* General FAQ */}
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
@@ -110,36 +111,25 @@ export function FAQ() {
                 </AccordionContent>
               </AccordionItem>
             ))}
-          </Accordion>
 
-          {/* Market Insights Section */}
-          <div className="mt-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-text-high mb-3">
-                Market Insights & Sources
-              </h2>
-              <p className="text-base text-text-med">
-                Detailed research and statistics backing TalkNToast's market opportunity
-              </p>
-            </div>
-
-            <div className="space-y-8">
-              {marketInsights.map((market, index) => (
-                <div
-                  key={index}
-                  id={market.id}
-                  className="bg-bg-elev1 rounded-2xl p-6 md:p-8 border border-primary/30 scroll-mt-24"
-                  data-testid={`market-insight-${index}`}
-                >
-                  {/* Title */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">{market.emoji}</span>
-                    <h3 className="text-xl md:text-2xl font-bold text-text-high">
-                      {market.title}
-                    </h3>
+            {/* Market Insights as FAQ Items */}
+            {marketInsightsFAQ.map((market, index) => (
+              <AccordionItem 
+                key={`market-${index}`}
+                value={`market-${index}`} 
+                id={market.id}
+                className="bg-bg-elev1 rounded-2xl px-6 border border-primary/30 scroll-mt-24"
+                data-testid={`market-faq-${index}`}
+              >
+                <AccordionTrigger className="text-left hover:no-underline py-5">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{market.emoji}</span>
+                    <span className="font-semibold text-text-high text-base md:text-lg">
+                      {market.question}
+                    </span>
                   </div>
-
-                  {/* Insights */}
+                </AccordionTrigger>
+                <AccordionContent className="pb-5">
                   <div className="space-y-6">
                     {market.insights.map((insight, idx) => (
                       <div key={idx} className="space-y-2">
@@ -160,10 +150,10 @@ export function FAQ() {
                       </div>
                     ))}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

@@ -90,11 +90,11 @@ export function StickyNav() {
             </button>
 
             <button 
-              onClick={() => scrollToSection('waitlist')}
+              onClick={() => scrollToSection('vision')}
               className="text-sm md:text-base text-text-med hover:text-text-high transition-colors"
-              data-testid="nav-join-waitlist"
+              data-testid="nav-vision"
             >
-              Join waitlist
+              Vision
             </button>
           </div>
         </div>
